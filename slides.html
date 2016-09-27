@@ -1,6 +1,6 @@
 <html>
 <head>
- <title>My personal fight against the modern laptop</title>
+ <title>Opening the ESP8089 firmware</title>
 
  <!-- Required stylesheet -->
  <link rel="stylesheet" media="screen" href="deck/core/deck.core.css">
@@ -28,16 +28,51 @@
 <!-- Begin slides. Just make elements with a class of slide. -->
 
 <section class="slide">
- <h1>Head1</h1>
- <h3>Head3</h3>
-  <p>Hamish Coleman</p>
+ <h1>Towards a more open ESP8266</h1>
+ <p>Hamish Coleman</p>
 </section>
 
 <section class="slide">
- <h2>Head2</h2>
+ <h2>ESP8266</h2>
+ <ul>
+  <li class="slide"> $2 micro controller with wifi </li>
+  <li class="slide"> However, not all open source </li>
+ </ul>
+ <h2 class="slide">ESP8089</h2>
+ <ul>
+  <li class="slide"> The same chip as the ESP8266, different firmware </li>
+  <li class="slide"> Intended to be a low cost WIFI chip for low end tablets </li>
+ </ul>
 </section>
 
+<section class="slide">
+ <h2>ESP8089</h2>
+ <ul>
+  <li class="slide"> Attaches via either SPI or SDIO </li>
+  <li class="slide"> Runs as a dumb slave device </li>
+  <li class="slide"> Host uploads firmware to start operation </li>
+ </ul>
+</section>
 
+<section class="slide">
+ <h2>Firmware</h2>
+ <ul>
+  <li class="slide"> Expresif SDK - ~300k blob </li>
+  <li class="slide"> ROM - 64K onboard </li>
+  <li class="slide"> Firmware - 66K blob </li>
+ </ul>
+</section>
+
+<section class="slide">
+ <h2>Next Steps</h2>
+ <ul>
+  <li class="slide"> Add protocol tracing to linux driver </li>
+  <li class="slide"> create Radare2 project for firmware+ROM </li>
+  <li class="slide"> (make use of existing entrypoint addresess) </li>
+  <li class="slide"> Start replacing the firmware used by the linux driver </li>
+  <li class="slide"> Document the knowledge gained to make a more open ESP8266</li>
+ </ul>
+</section>
 
 <!-- End slides. -->
 
